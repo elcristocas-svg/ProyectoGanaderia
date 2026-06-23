@@ -1,10 +1,9 @@
-/* 1. CONFIGURACIÓN GENERAL Y EL MODELO DE CAJAS*/
 :root {
-    --color-principal: #2E5A44;  /* Verde bosque */
-    --color-secundario: #D4A373; /* Tono tierra/madera */
-    --color-oscuro: #1A3024;     /* Verde muy oscuro para texto */
-    --color-claro: #FAFAFA;      /* Fondo casi blanco */
-    --color-tarjeta: #FFFFFF;    /* Blanco puro para cajas */
+    --color-principal: #2E5A44;  
+    --color-secundario: #D4A373; 
+    --color-oscuro: #1A3024;     
+    --color-claro: #FAFAFA;      
+    --color-tarjeta: #FFFFFF;    
     --fuente: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -43,12 +42,9 @@ header, .main-header {
     margin-bottom: 20px; 
     border-bottom: 5px solid var(--color-secundario); 
     
-    /* ⚠️ AQUÍ: Punto de referencia para cualquier elemento absoluto que vaya adentro */
     position: relative;
     min-height: 250px; 
 }
-
-/* ⚠️ AQUÍ: Capa absoluta que flota sobre el banner y le da el tinte verde transparente */
 .header-overlay {
     position: absolute;
     top: 0;
@@ -57,7 +53,6 @@ header, .main-header {
     height: 100%;
     background-color: rgba(46, 90, 68, 0.85); 
     
-    /* Centramos el h1 y el nav dentro de la capa flotante */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -113,7 +108,7 @@ header, .main-header {
     color: darkgray;
 }
 
-/* 3. SECCIONES Y TARJETAS*/
+
 h2 {
     font-size: 2.2rem;
     color: var(--color-principal);
@@ -141,7 +136,7 @@ h2 {
     margin-bottom: 12px; 
 }
 
-/* 4. MAQUETACIÓN DE LA TABLA E IMÁGENES INTERNAS*/
+
 .imagenesTablas {
     display: block;
     width: 80px;          
@@ -195,7 +190,7 @@ h2 {
     border: 1px solid #e2e8f0;
 }
 
-/* 5.MODELO DE CAJAS*/
+
 .dropdown-box {
     background-color: #f4f7f5;
     border-radius: 6px;
@@ -236,7 +231,6 @@ h2 {
     border-left: 4px solid var(--color-principal); 
 }
 
-/* 6. MULTIMEDIA*/
 .media-box img {
     width: 100%; 
     height: auto;
@@ -275,7 +269,6 @@ h2 {
     margin-top: 10px;
 }
 
-/* 7. PIE DE PÁGINA Y ICONOS DE REDES SOCIALES*/
 .main-footer {
     background-color: var(--color-oscuro);
     color: white;
@@ -308,7 +301,7 @@ h2 {
     align-items: center;
     justify-content: center;
     border-radius: 50%;
-    background-color: rgba(255, 255, 255, 0.2); /* Subido un poco el fondo para que resalte más en pantalla */
+    background-color: rgba(255, 255, 255, 0.2); /*Subi un poco el fondo para que resalte más en pantalla*/
     box-shadow: 0 4px 8px rgba(0,0,0,0.3);
     transition: transform 0.3s ease, background-color 0.3s ease;
 }
@@ -333,7 +326,6 @@ h2 {
     }
 }
 
-/* Corrección de color para las páginas internas */
 .header-overlay h2 {
     color: #ffffff;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
