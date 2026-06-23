@@ -30,7 +30,7 @@ body {
 /*2. ENCABEZADO Y NAVEGACIÓN*/
 header, .main-header {
     background-color: var(--color-principal);
-    background-image: linear-gradient(rgba(46, 90, 68, 0.85), rgba(46, 90, 68, 0.85)), url("../imagenes/animalesgranjabannersinfondo.png");
+    background-image: url("../imagenes/animalesgranjabannersinfondo.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -42,6 +42,27 @@ header, .main-header {
     padding: 35px 10px; 
     margin-bottom: 20px; 
     border-bottom: 5px solid var(--color-secundario); 
+    
+    /* ⚠️ AQUÍ: Punto de referencia para cualquier elemento absoluto que vaya adentro */
+    position: relative;
+    min-height: 250px; 
+}
+
+/* ⚠️ AQUÍ: Capa absoluta que flota sobre el banner y le da el tinte verde transparente */
+.header-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(46, 90, 68, 0.85); 
+    
+    /* Centramos el h1 y el nav dentro de la capa flotante */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
 }
 
 .main-header h1 {
@@ -254,7 +275,7 @@ h2 {
     margin-top: 10px;
 }
 
-/* 7. PIE DE PÁGINA Y ICONOS DE REDES SOCIALES (Corregido)*/
+/* 7. PIE DE PÁGINA Y ICONOS DE REDES SOCIALES*/
 .main-footer {
     background-color: var(--color-oscuro);
     color: white;
@@ -270,8 +291,11 @@ h2 {
 .social-networks {
     display: flex;
     justify-content: center;
-    gap: 20px;
-    margin-top: 20px;
+    gap: 10px;
+    margin-top: 20px; 
+    /*eliminacion de fixed por que se pierde en el fondo*/
+    position: static;
+
 }
 
 .social-networks a {
@@ -284,7 +308,8 @@ h2 {
     align-items: center;
     justify-content: center;
     border-radius: 50%;
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: rgba(255, 255, 255, 0.2); /* Subido un poco el fondo para que resalte más en pantalla */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
     transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
@@ -306,4 +331,10 @@ h2 {
         grid-template-columns: 40% 60%; 
         align-items: start;
     }
+}
+
+/* Corrección de color para las páginas internas */
+.header-overlay h2 {
+    color: #ffffff;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
 }
